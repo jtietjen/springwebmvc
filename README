@@ -1,0 +1,30 @@
+***** Exercises *****
+
+
+Solution for excercise 1:
+Hints:
+     There are different context object, one of them is authentication
+branch: usernameAtFrontPage
+Solution for Container Excercise 2:
+     * Orientate at UserController
+     * Implement Container Entity
+     * Implement Controller Controller
+     * Implement Container View
+     * Implement Container Model
+         
+github user: ttumvcexample password: ttumvcexample123
+
+
+***** IDEs *****
+
+  Start Idea: Open Terminal > idea.sh
+  Start Eclipse: Open Terminal > eclipse
+
+
+
+
+***** Other notes *****
+Starting of DB Viewer
+C:\data\git\mvc-example\ttuexample>mvn exec:java  -Dexec.mainClass="org.hsqldb.u
+til.DatabaseManagerSwing"
+
