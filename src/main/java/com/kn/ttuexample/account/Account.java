@@ -12,6 +12,7 @@ public class Account implements java.io.Serializable {
 
 	public static final String FIND_BY_EMAIL = "Account.findByEmail";
 
+
 	@Id
 	@GeneratedValue
 	private Long id;
