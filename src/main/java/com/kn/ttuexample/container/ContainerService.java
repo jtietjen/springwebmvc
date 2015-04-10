@@ -16,6 +16,7 @@ public class ContainerService {
     @PersistenceContext
     private EntityManager entityManager;
 
+    @Transactional
     public void create(Container container) {
         entityManager.persist(container);
         return;
