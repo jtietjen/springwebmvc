@@ -5,6 +5,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import javax.persistence.TypedQuery;
+import java.util.List;
 
 /**
  * Created by xubuntu on 02.04.15.
@@ -20,5 +23,16 @@ public class ContainerService {
     public void create(Container container) {
         entityManager.persist(container);
         return;
+    }
+
+    public void listContainers() {
+        TypedQuery<Container> containerTypedQuery =
+                entityManager.createQuery("from Container c", Container.class);
+        List<Container> resultList = containerTypedQuery.getResultList();
+
+        for (Container container : resultList) {
+            System.out.println("container size = " + container.getSize());
+            System.out.println("container id = " + container.getInternalId());
+        }
     }
 }
